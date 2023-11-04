@@ -1,0 +1,11 @@
+/* TopCenteredTitle.css */
+.top-centered-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust the height as needed */
+    background-color: #333; /* Background color for the title bar */
+    color: #fff; /* Text color */
+    font-size: 24px; /* Adjust the font size as needed */
+  }
+  

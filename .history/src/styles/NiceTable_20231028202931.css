@@ -1,0 +1,63 @@
+/* NiceTable.css */
+.nice-table {
+  position: absolute;
+  margin-top: 2%;
+  height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-title {
+  text-align: center;
+}
+
+table {
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  text-align: left;
+  background-color: #f5f5f5;
+  border-radius: 1em;
+  table-layout: auto; /* Set table layout to auto */
+}
+
+.table-container {
+  height:1000px;
+  position: relative;
+  display: flex;
+   align-items: center; 
+   justify-content: center;
+   background-color: red;
+}
+
+button {
+  bottom: 0;
+  margin-top: 10px; /* Add space between the table and the button */
+}
+
+
+
+
+
+
+
+.cell-render {
+  width: 90%;
+  font-size: 100%;
+}
+
+th, td {
+  height: 2em;
+  padding: 0.2em 0.2em;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e0e0e0;
+}

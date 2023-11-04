@@ -1,0 +1,17 @@
+/* TopCenteredTitle.css */
+.top-centered-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.5%;
+  background-color: #06a59a;
+  color: #fff;
+  font-size: 100%;
+  border-radius: 1em;
+  margin-top: 3%;
+  left: 25%;
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+  text-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.4);
+  width: 50%;
+}

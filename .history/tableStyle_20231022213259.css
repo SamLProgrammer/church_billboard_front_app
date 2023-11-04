@@ -1,0 +1,26 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .card {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .card-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+  }
+  

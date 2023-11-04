@@ -1,0 +1,41 @@
+/* NiceTable.css */
+.nice-table {
+  position: relative;
+  margin-top: 2%;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-title {
+  text-align: center;
+}
+
+table {
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  text-align: left;
+  background-color: #f5f5f5;
+  border-radius: 1em;
+  table-layout: auto; /* Set table layout to auto */
+}
+
+.cell-render {
+  width: 90%;
+  height: 90%;
+}
+
+th, td {
+  padding: 1em 2%;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e0e0e0;
+}

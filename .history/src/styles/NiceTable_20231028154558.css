@@ -1,0 +1,27 @@
+/* NiceTable.css */
+.nice-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table {
+    width: 100%;
+    text-align: left;
+    background-color: #f5f5f5;
+    border-radius: 1em;
+  }
+  
+  th, td {
+    padding: 1em 2%;
+    border: 1px solid #ccc;
+  }
+  
+  thead {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #e0e0e0;
+  }
+  

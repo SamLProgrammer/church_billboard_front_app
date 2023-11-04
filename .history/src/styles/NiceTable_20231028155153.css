@@ -1,0 +1,32 @@
+/* NiceTable.css */
+.nice-table {
+  position: relative;
+  margin-top: 2%;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table {
+  position: absolute;
+  width: auto; /* Allow columns to adjust to content */
+  left: 25%;
+  text-align: left;
+  background-color: #f5f5f5;
+  border-radius: 1em;
+  table-layout: auto; /* Set table layout to auto */
+}
+
+th,
+td {
+  padding: 1em 2%;
+  border: 1px solid #ccc;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e0e0e0;
+}
