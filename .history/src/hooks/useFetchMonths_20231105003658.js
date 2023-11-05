@@ -1,6 +1,6 @@
 export const fetchMonths = async () => {
     // const sessionToken = localStorage.getItem('sessionToken');
-    const url = 'https://mysqlconnectornoderaged.com:5000/months';
+    const url = 'http://mysqlconnectornoderaged.com:5000/months';
 
     const dummyData = {
         username: 'x',
@@ -8,7 +8,7 @@ export const fetchMonths = async () => {
     };
     const response = await fetch(url, {
         method: 'POST',
-        credentials: 'include',
+        // credentials: 'include',
         headers: {
             'Content-Type': 'application/json',
             // 'CustomAuth': sessionToken, 
