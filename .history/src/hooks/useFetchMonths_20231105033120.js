@@ -4,7 +4,11 @@ export const fetchMonths = async () => {
     const response = await fetch(url, {
         method: 'POST',
         credentials: 'include',
-    });    
+        headers: {
+            'Content-Type': 'application/json',
+            // 'CustomAuth': sessionToken, 
+        },
+    });
 
     if (response.ok) {
         return await response.text();
