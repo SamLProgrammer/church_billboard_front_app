@@ -16,5 +16,5 @@ export const fetchMonths = async () => {
     } else {
         throw new Error(`Request failed with status ${response.status}`);
     }
-//http to https didnt commit on vps
+//http didnt commit on vps
 };
