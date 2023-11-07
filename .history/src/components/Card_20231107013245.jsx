@@ -53,7 +53,6 @@ const Card = ({ item, index }) => {
       switch (option) {
         case "Supper":
           {
-            console.log('monthData');
             console.log(monthData);
             localStorage.setItem(
               "selectedMonthData",
