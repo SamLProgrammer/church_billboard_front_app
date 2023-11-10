@@ -76,7 +76,7 @@ export const MonthTable = () => {
       <MonthTitle title={selectedMonth} />
       <FamilyEventTable
         sundaysList={monthData.sundaysList}
-        recordsList={(type == 'H') ? monthData.supperList : (type == 'S') ? monthData.snackList : 'Error on Type'}
+        recordsList={monthData.supperList}
         updateCurrentData={updateCurrentData}
         type={type}
       />

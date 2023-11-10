@@ -55,7 +55,7 @@ const Card = ({ item, index }) => {
           {
             localStorage.setItem(
               "selectedMonthData",
-              JSON.stringify({ monthData, selectedMonth: item, type: 'H' })
+              JSON.stringify({ monthData, selectedMonth: item, type: "H" })
             );
             navigate("/monthTable");
           }

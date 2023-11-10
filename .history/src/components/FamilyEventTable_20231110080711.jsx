@@ -82,7 +82,7 @@ export const FamilyEventTable = ({
           <thead>
             <tr>
               <th colSpan="2" className="table-title">
-                {(type == 'H') ? 'Santa Cena': (type == 'S') ? 'Refrigerio' : 'Error on Type'}
+                {(type == 'S') ? 'Santa Cena': 'Refrigerio'}
               </th>
             </tr>
             <tr>
