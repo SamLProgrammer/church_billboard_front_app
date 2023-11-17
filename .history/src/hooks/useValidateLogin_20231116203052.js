@@ -1,6 +1,6 @@
 export const validateLogin = async (userName, password) => {
-  // const url = 'http://www.localhost:5000/login';
-  const url = 'https://www.mysqlconnectornoderaged.com/login';
+  const url = 'http://www.localhost:5000/login';
+  // const url = 'https://www.mysqlconnectornoderaged.com/login';
   const loginData = {
     username: userName,
     password: password,

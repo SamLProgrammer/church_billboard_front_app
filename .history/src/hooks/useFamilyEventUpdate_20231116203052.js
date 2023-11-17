@@ -1,8 +1,6 @@
 
 export const updateFamilyEvents = async (changedRows, type) => {
     // const sessionToken = localStorage.getItem('sessionToken');
-    // const url = 'http://localhost:5000/addFamilyEvent';
-    const url = 'https://www.mysqlconnectornoderaged.com/addFamilyEvent';
     const adjustedChangedRows = changedRows.map((row) => {
         return {
             date: JSON.stringify(row.date),
@@ -10,6 +8,10 @@ export const updateFamilyEvents = async (changedRows, type) => {
             type
         };
     })
+    console.log('adjustedChangedRows');
+    console.log(adjustedChangedRows);
+    const url = 'http://localhost:5000/addFamilyEvent';
+    // const url = 'https://www.mysqlconnectornoderaged.com/addFamilyEvent';
     const response = await fetch(url, {
         method: 'POST',
         credentials: 'include',

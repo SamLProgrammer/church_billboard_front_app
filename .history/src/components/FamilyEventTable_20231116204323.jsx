@@ -5,15 +5,15 @@ import { CellRender } from "./CellRender";
 import { useNavigate } from "react-router-dom";
 import { updateFamilyEvents } from "../hooks/useFamilyEventUpdate";
 
-const initializeList = (recordsList, daysList, setFinalList) => {
+const initializeList = (recordsList, sundaysList, setFinalList) => {
   const auxList = [];
   if (recordsList == null) {
-    for (const sunday of daysList) {
+    for (const sunday of sundaysList) {
       auxList.push({ date: sunday, family: null });
     }
     setFinalList(auxList);
   } else {
-    for (const sunday of daysList) {
+    for (const sunday of sundaysList) {
       const matchingRecord = recordsList.find(
         (record) => sunday == record.familyEventDate
       );
@@ -25,7 +25,7 @@ const initializeList = (recordsList, daysList, setFinalList) => {
 };
 
 export const FamilyEventTable = ({
-  daysList,
+  sundaysList,
   recordsList,
   type,
   updateCurrentData,
@@ -57,7 +57,7 @@ export const FamilyEventTable = ({
   };
 
   useEffect(() => {
-    initializeList(recordsList, daysList, setFinalList);
+    initializeList(recordsList, sundaysList, setFinalList);
   }, []);
 
   const handleConfirmClick = async () => {
@@ -115,7 +115,7 @@ export const FamilyEventTable = ({
 };
 
 FamilyEventTable.propTypes = {
-  daysList: PropTypes.array.isRequired,
+  sundaysList: PropTypes.array.isRequired,
   recordsList: PropTypes.array,
   type: PropTypes.string.isRequired,
   updateCurrentData: PropTypes.func.isRequired,

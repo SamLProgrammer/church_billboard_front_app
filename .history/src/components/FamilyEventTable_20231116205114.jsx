@@ -58,6 +58,7 @@ export const FamilyEventTable = ({
 
   useEffect(() => {
     initializeList(recordsList, daysList, setFinalList);
+    console.log(recordsList);
   }, []);
 
   const handleConfirmClick = async () => {

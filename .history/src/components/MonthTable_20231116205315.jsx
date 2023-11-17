@@ -66,7 +66,7 @@ export const MonthTable = () => {
       case "C":
         {
           if (existingData[selectedMonth].cleaningList) {
-            existingData[selectedMonth].cleaningList = existingData[
+            existingData[selectedMonth].snackList = existingData[
               selectedMonth
             ].cleaningList.map((cleaningItem) => {
               const matchingItem = transformedChangedRows.find(

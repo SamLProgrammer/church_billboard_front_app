@@ -66,7 +66,7 @@ export const MonthTable = () => {
       case "C":
         {
           if (existingData[selectedMonth].cleaningList) {
-            existingData[selectedMonth].cleaningList = existingData[
+            existingData[selectedMonth].snackList = existingData[
               selectedMonth
             ].cleaningList.map((cleaningItem) => {
               const matchingItem = transformedChangedRows.find(
@@ -95,8 +95,8 @@ export const MonthTable = () => {
     <>
       <MonthTitle title={selectedMonth} />
       <FamilyEventTable
-        daysList={(type == 'H' || type == 'S') ? monthData.sundaysList : (type == 'C') ? monthData.saturdaysList : 'Error on Type'}
-        recordsList={(type == 'H') ? monthData.supperList : (type == 'S') ? monthData.snackList : (type == 'C') ? monthData.cleaningList : 'Error on Type'}
+        sundaysList={monthData.sundaysList}
+        recordsList={(type == 'H') ? monthData.supperList : (type == 'S') ? monthData.snackList : 'Error on Type'}
         updateCurrentData={updateCurrentData}
         type={type}
       />

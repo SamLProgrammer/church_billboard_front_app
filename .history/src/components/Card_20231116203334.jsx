@@ -72,13 +72,7 @@ const Card = ({ item, index }) => {
           }
           break;
         case "Cleaning":
-          {
-            localStorage.setItem(
-              "selectedMonthData",
-              JSON.stringify({ monthData, selectedMonth: item, type: 'C' })
-            );
-            navigate("/monthTable");
-          }
+          console.log("Tuesday is a productive day.");
           break;
         case "Birthdate":
           console.log("Tuesday is a productive day.");
