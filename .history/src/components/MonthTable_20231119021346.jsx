@@ -3,7 +3,7 @@ import { FamilyEventTable } from "./FamilyEventTable";
 import { MonthTitle } from "./MonthTitle";
 
 export const MonthTable = () => {
-  const [currentData] = useState(
+  const [currentData, setSelectedMonthData] = useState(
     JSON.parse(localStorage.getItem("selectedMonthData"))
   );
   const { selectedMonth, monthData, type } = currentData;
@@ -22,8 +22,9 @@ export const MonthTable = () => {
       case "H":
         {
           if (existingData[selectedMonth].supperList?.length > 0) {
-            existingData[selectedMonth].supperList = 
-            existingData[selectedMonth].supperList.map((supperItem) => {
+            existingData[selectedMonth].supperList = existingData[
+              selectedMonth
+            ].supperList.map((supperItem) => {
               const matchingItem = transformedChangedRows.find(
                 (changedItem) => {
                   return (
@@ -31,17 +32,16 @@ export const MonthTable = () => {
                   );
                 }
               );
-              if(matchingItem) {
-                transformedChangedRows = transformedChangedRows.filter((row) => {
-                  supperItem.familyEventDate === row.familyEventDate
-                })
-                return {...supperItem, family: matchingItem.family}
+
+              if (matchingItem) {
+                return { ...supperItem, family: matchingItem.family };
               }
               return supperItem;
-            })
-            existingData[selectedMonth].supperList = [...existingData[selectedMonth].supperList, ...transformedChangedRows];
-          }else {
-            existingData[selectedMonth].supperList = [...transformedChangedRows];
+            });
+          } else {
+            existingData[selectedMonth].supperList = [
+              ...transformedChangedRows,
+            ];
           }
         }
         break;
@@ -98,34 +98,17 @@ export const MonthTable = () => {
           }
         }
         break;
-      case "B":
-        {
-          if (existingData[selectedMonth].birthDaysList?.length > 0) {
-            existingData[selectedMonth].birthDaysList = 
-            existingData[selectedMonth].birthDaysList.map((birthDateItem) => {
-              const matchingItem = transformedChangedRows.find(
-                (changedItem) => {
-                  return (
-                    birthDateItem.familyEventDate === changedItem.familyEventDate
-                  );
-                }
-              );
-              if(matchingItem) {
-                transformedChangedRows = transformedChangedRows.filter((row) => {
-                  birthDateItem.familyEventDate === row.familyEventDate
-                })
-                return {...birthDateItem, family: matchingItem.family}
-              }
-              return birthDateItem;
-            })
-            existingData[selectedMonth].birthDaysList = [...existingData[selectedMonth].birthDaysList, ...transformedChangedRows];
-          }else {
-            existingData[selectedMonth].birthDaysList = [...transformedChangedRows];
-          }
-        }
-        break;
     }
     localStorage.setItem("monthsMap", JSON.stringify(existingData));
+    const currentSelectedMonthData = JSON.parse(
+      localStorage.getItem("monthsMap")
+    );
+    console.log("currentSelectedMonthData");
+    console.log(currentSelectedMonthData);
+    // localStorage.setItem("selectedMonthData", JSON.stringify());
+    // console.log(JSON.parse(localStorage.getItem("monthsMap")));
+    // console.log(JSON.parse(Object.entries(JSON.stringify(localStorage.getItem("monthsMap")))));
+    // setCurrentData(existingData);
   };
 
   return (

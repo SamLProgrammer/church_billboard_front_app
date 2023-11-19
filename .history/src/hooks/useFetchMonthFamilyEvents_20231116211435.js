@@ -1,7 +1,8 @@
-export const fetchMonths = async () => {
+
+export const fetchMonthFamilyEvents = async ( month ) => {
     const sessionToken = localStorage.getItem('sessionToken');
-    const url = 'https://www.mysqlconnectornoderaged.com/months';
-    // const url = 'http://www.localhost:5000/months';
+    const url = 'http://localhost:5000/monthData';
+    // const url = 'https://www.mysqlconnectornoderaged.com/monthData';
 
     const response = await fetch(url, {
         method: 'POST',
@@ -10,6 +11,7 @@ export const fetchMonths = async () => {
             'Content-Type': 'application/json',
             'CustomAuth': sessionToken, 
         },
+        body: month,
     });
 
     if (response.ok) {

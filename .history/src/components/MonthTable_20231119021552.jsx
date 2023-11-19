@@ -3,7 +3,7 @@ import { FamilyEventTable } from "./FamilyEventTable";
 import { MonthTitle } from "./MonthTitle";
 
 export const MonthTable = () => {
-  const [currentData] = useState(
+  const [currentData, setSelectedMonthData] = useState(
     JSON.parse(localStorage.getItem("selectedMonthData"))
   );
   const { selectedMonth, monthData, type } = currentData;

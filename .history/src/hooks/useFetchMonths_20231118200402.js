@@ -1,7 +1,7 @@
 export const fetchMonths = async () => {
     const sessionToken = localStorage.getItem('sessionToken');
-    const url = 'https://www.mysqlconnectornoderaged.com/months';
-    // const url = 'http://www.localhost:5000/months';
+    const url = 'http://www.localhost:5000/months';
+    // const url = 'https://www.mysqlconnectornoderaged.com/months';
 
     const response = await fetch(url, {
         method: 'POST',
